@@ -38,7 +38,7 @@ document.getElementById('botao-finalizar').addEventListener('click', function (e
     });
 
     // Número de WhatsApp (substitua pelo seu número)
-    const numeroWhatsApp = ''; // Exemplo: +55 11 99999-9999
+    const numeroWhatsApp = '5579999353965'; // Exemplo: +55 11 99999-9999
     const baseUrl = 'https://wa.me/';
     
     // Enviar mensagem via WhatsApp
