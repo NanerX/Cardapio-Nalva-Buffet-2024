@@ -22,7 +22,7 @@ body {
 /* Estilo da imagem */
 #logo {
     margin-top: 20px;       /* Espaçamento do topo, ajuste conforme necessário */
-    max-width: 30%;         /* Limitar o tamanho da imagem */
+    max-width: 200%;         /* Limitar o tamanho da imagem */
     height: auto;
 }
 
