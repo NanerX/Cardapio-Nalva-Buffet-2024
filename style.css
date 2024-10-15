@@ -1,0 +1,93 @@
+@font-face {
+ font-family: 'Agenor Thin';
+ src: url('fonts/agenor-thin.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+}
+
+/* Definir cor de fundo */
+body {
+ background-color: #FDEECD;
+ font-family: 'Agenor Thin', sans-serif; /* Aplicar a fonte */
+ color: #333;
+ margin: 0;
+ padding: 0;
+ display: flex;           /* Ativa flexbox */
+ flex-direction: column;  /* Alinha os itens na coluna */
+ align-items: center;     /* Centraliza horizontalmente */
+ justify-content: flex-start; /* Alinha itens no topo */
+ height: 100vh;           /* Altura total da página */
+}
+
+/* Estilo da imagem */
+#logo {
+ margin-top: 20px;       /* Espaçamento do topo, ajuste conforme necessário */
+ max-width: 30%;         /* Limitar o tamanho da imagem */
+ height: auto;
+}
+
+/* Estilo para o título */
+#titulo {
+ text-align: center;      /* Centralizar o texto */
+ margin-top: 10px;       /* Espaçamento acima do título */
+ font-size: 2em;         /* Tamanho da fonte, ajuste conforme necessário */
+ color: #333;            /* Cor do texto */
+}
+
+/* Estilo para a seção de salgados fritos */
+#salgados-fritos-titulo {
+ text-align: center;      /* Centralizar o título */
+ margin-top: 20px;       /* Espaçamento acima do título */
+ font-size: 1.5em;       /* Tamanho da fonte, ajuste conforme necessário */
+ color: #333;            /* Cor do texto */
+}
+
+#salgados-lista {
+ list-style-type: none;  /* Remove os marcadores da lista */
+ padding: 0;             /* Remove o padding padrão */
+}
+
+#salgados-lista li {
+ text-align: center;      /* Centraliza os itens da lista */
+ font-size: 1.2em;       /* Tamanho da fonte dos itens da lista */
+ margin: 10px 0;         /* Aumentar o espaço entre os itens */
+}
+
+/* Estilo para a seção de salgados de forno */
+#salgados-forno-titulo {
+ text-align: center;      /* Centralizar o título */
+ margin-top: 20px;       /* Espaçamento acima do título */
+ font-size: 1.5em;       /* Tamanho da fonte, ajuste conforme necessário */
+ color: #333;            /* Cor do texto */
+}
+
+#salgados-forno-lista {
+ list-style-type: none;  /* Remove os marcadores da lista */
+ padding: 0;             /* Remove o padding padrão */
+}
+
+#salgados-forno-lista li {
+ text-align: center;      /* Centraliza os itens da lista */
+ font-size: 1.2em;       /* Tamanho da fonte dos itens da lista */
+ margin: 10px 0;         /* Aumentar o espaço entre os itens */
+}
+
+/* Consultas de mídia para telas menores */
+@media (max-width: 600px) {
+ #logo {
+     max-width: 80%;      /* Aumenta o tamanho da logo em telas pequenas */
+ }
+
+ #titulo {
+     font-size: 1.5em;     /* Tamanho da fonte menor para o título */
+ }
+
+ #salgados-fritos-titulo {
+     font-size: 1.2em;     /* Tamanho da fonte menor para o título de salgados fritos */
+ }
+
+ #salgados-lista li,
+ #salgados-forno-lista li {
+     font-size: 1em;       /* Tamanho da fonte menor para os itens da lista */
+ }
+}
