@@ -80,7 +80,7 @@ ul {
     border: none;       /* Remove a borda do input */
     background: none;   /* Remove o fundo padrão */
 }
-/* Imagem de fundo para os inputs de quantidade */
+
 /* Estilo para a lista de salgados selecionados */
 #lista-selecionados {
     list-style-type: none; /* Remove os marcadores da lista */
@@ -107,10 +107,6 @@ ul {
     padding: 5px; /* Espaçamento interno */
     margin-left: 10px; /* Espaçamento à esquerda */
     border-radius: 5px; /* Cantos arredondados, se desejado */
-}
-/* Estilo para a lista de salgados */
-ul {
-    padding: 0; /* Remove o padding padrão */
 }
 
 /* Estilo dos itens da lista de salgados */
