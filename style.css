@@ -122,5 +122,5 @@ input[type="checkbox"] {
     width: 25px; /* Largura do checkbox */
     height: 25px; /* Altura do checkbox */
     margin-left: 10px; /* Espaçamento à esquerda */
-    accent-color: #4CAF50; /* Cor personalizada para o checkbox */
+    accent-color: #000000; /* Cor personalizada para o checkbox */
 }
