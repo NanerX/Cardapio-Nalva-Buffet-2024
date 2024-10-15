@@ -127,3 +127,40 @@ input[type="checkbox"] {
     margin-left: 10px; /* Espaçamento à esquerda */
     accent-color: #000000; /* Cor personalizada para o checkbox */
 }
+/* Estilo para o campo de nome do cliente e a data do evento */
+label {
+    font-size: 1.2em; /* Ajusta o tamanho do texto do label */
+    color: #333; /* Cor do texto */
+    margin-bottom: 5px; /* Espaçamento abaixo do label */
+    display: block; /* Faz o label ocupar a linha inteira */
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 80%; /* Largura do campo para se ajustar ao layout */
+    padding: 10px; /* Espaçamento interno para o campo de input */
+    margin-bottom: 20px; /* Espaçamento abaixo do campo */
+    border: 2px solid #ddd; /* Borda sutil para o campo */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1em; /* Tamanho do texto */
+    font-family: 'Agenor Thin', sans-serif; /* Aplicar a fonte personalizada */
+    color: #333; /* Cor do texto */
+    background-color: #fff; /* Cor de fundo do input */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar */
+}
+
+/* Ajuste para o campo em dispositivos móveis */
+@media (max-width: 768px) {
+    input[type="text"],
+    input[type="date"] {
+        width: 100%; /* Ocupa toda a largura no celular */
+    }
+}
+
+/* Estilo ao focar nos campos (quando o usuário clica neles) */
+input[type="text"]:focus,
+input[type="date"]:focus {
+    outline: none; /* Remove o contorno padrão */
+    border-color: #4CAF50; /* Cor da borda ao focar */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Realça a sombra ao focar */
+}
