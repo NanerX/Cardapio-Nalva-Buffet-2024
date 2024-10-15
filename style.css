@@ -103,7 +103,7 @@ ul {
     height: 40px; /* Altura do input */
     font-family: 'Agenor Thin', sans-serif; /* Aplicar a fonte */
     font-size: 1em; /* Tamanho da fonte */
-    color: #333; /* Cor do texto */
+    color: #000000; /* Cor do texto */
     padding: 5px; /* Espaçamento interno */
     margin-left: 10px; /* Espaçamento à esquerda */
     border-radius: 5px; /* Cantos arredondados, se desejado */
