@@ -24,6 +24,7 @@ body {
     margin-top: 20px;       /* Espaçamento do topo, ajuste conforme necessário */
     max-width: 100%;         /* Limitar o tamanho da imagem */
     height: auto;
+    background: none;
 }
 
 /* Estilo para o título */
@@ -75,11 +76,13 @@ ul {
 
 #botao-imagem,
 #botao-finalizar {
-    width: 300px;       /* Ajuste a largura da imagem */
-    height: auto;       /* Mantém a proporção da altura */
-    border: none;       /* Remove a borda do input */
-    background: none;   /* Remove o fundo padrão */
+    margin-bottom: 200px; /* Ajusta a margem inferior para 20 pixels */
+    width: 300px;        /* Ajuste a largura da imagem */
+    height: auto;        /* Mantém a proporção da altura */
+    border: none;        /* Remove a borda do input */
+    background: none;    /* Remove o fundo padrão */
 }
+
 
 /* Estilo para a lista de salgados selecionados */
 #lista-selecionados {
