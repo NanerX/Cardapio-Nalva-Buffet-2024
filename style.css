@@ -137,7 +137,7 @@ label {
 
 input[type="text"],
 input[type="date"] {
-    width: 50%; /* Largura do campo para se ajustar ao layout */
+    width: 10%; /* Largura do campo para se ajustar ao layout */
     padding: 10px; /* Espaçamento interno para o campo de input */
     margin-bottom: 20px; /* Espaçamento abaixo do campo */
     border: 2px solid #ddd; /* Borda sutil para o campo */
