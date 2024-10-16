@@ -43,13 +43,13 @@ document.getElementById('botao-finalizar').addEventListener('click', function (e
         const ano = dataObj.getFullYear();
         dataFormatada = `${dia}/${mes}/${ano}`;
     }
-
-    // Mensagem formatada para o WhatsApp
-    let mensagem = `Orçamento de ${nomeCliente} para a data ${dataFormatada}:\n\n`;
-
+    // Mensagem formatada em formato de tabela para o WhatsApp
+    let mensagem = `Orçamento de ${nomeEvento} para data ${dataFormatada}:\n\n`;
+    mensagem += 'Item                | Quantidade\n';
+    mensagem += '---------------------------------\n';
     salgadosSelecionados.forEach((salgado, index) => {
-        const quantidade = quantidades[index] || 0; // Captura a quantidade correspondente
-        mensagem += `${salgado}: ${quantidade}\n`;
+        const quantidade = quantidades[index] || 0;
+        mensagem += `${salgado.padEnd(20)}| ${quantidade}\n`;
     });
 
     // Número de WhatsApp (substitua pelo seu número)
