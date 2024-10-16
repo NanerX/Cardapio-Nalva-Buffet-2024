@@ -34,8 +34,18 @@ document.getElementById('botao-finalizar').addEventListener('click', function (e
     const nomeCliente = localStorage.getItem('nomeCliente') || 'Cliente';
     const dataEvento = localStorage.getItem('dataEvento') || 'Data não informada';
 
+    // Formatar a data para o formato dd/mm/aaaa, se a data for válida
+    let dataFormatada = dataEvento;
+    if (dataEvento !== 'Data não informada') {
+        const dataObj = new Date(dataEvento);
+        const dia = String(dataObj.getDate()).padStart(2, '0');
+        const mes = String(dataObj.getMonth() + 1).padStart(2, '0'); // Os meses começam do 0
+        const ano = dataObj.getFullYear();
+        dataFormatada = `${dia}/${mes}/${ano}`;
+    }
+
     // Mensagem formatada para o WhatsApp
-    let mensagem = `Orçamento de ${nomeCliente} para a data ${dataEvento}:\n\n`;
+    let mensagem = `Orçamento de ${nomeCliente} para a data ${dataFormatada}:\n\n`;
 
     salgadosSelecionados.forEach((salgado, index) => {
         const quantidade = quantidades[index] || 0; // Captura a quantidade correspondente
