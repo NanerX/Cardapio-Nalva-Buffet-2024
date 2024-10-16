@@ -1,3 +1,26 @@
+// Lista de salgados com seus preços
+const precosSalgados = {
+    "Camarão Empanado": 1.40,
+    "Camarão Empanado na Tapioca": 1.60,
+    "Croquete de Camarão": 1.40,
+    "Bacalhau": 1.40,
+    "Bolinho de Carne de Sol": 1.40,
+    "Risole de Aratu": 1.40,
+    "Coxinha": 1.20,
+    "Bolinha de Queijo": 1.20,
+    "Pão de Queijo": 1.20,
+    "Pão de Queijo com Recheio": 1.30,
+    "Peito de Peru": 1.40,
+    "Canudinho": 1.20,
+    "Pastelzinho": 1.20,
+    "Empada": 1.20,
+    "Barquete": 1.20,
+    "Canolle": 1.20,
+    "Crepnete": 1.20,
+    "Cormeguis": 1.20,
+    "Casquinha de Aratu": 1.60
+};
+
 // Recupera os salgados selecionados do localStorage
 const salgadosSelecionados = JSON.parse(localStorage.getItem('salgadosSelecionados')) || [];
 
@@ -34,24 +57,23 @@ document.getElementById('botao-finalizar').addEventListener('click', function (e
     const nomeCliente = localStorage.getItem('nomeCliente') || 'Cliente';
     const dataEvento = localStorage.getItem('dataEvento') || 'Data não informada';
 
-    // Formatar a data para o formato dd/mm/aaaa, se a data for válida
-    let dataFormatada = dataEvento;
-    if (dataEvento !== 'Data não informada') {
-        const dataObj = new Date(dataEvento);
-        const dia = String(dataObj.getDate()).padStart(2, '0');
-        const mes = String(dataObj.getMonth() + 1).padStart(2, '0'); // Os meses começam do 0
-        const ano = dataObj.getFullYear();
-        dataFormatada = `${dia}/${mes}/${ano}`;
-    }
+    // Variável para armazenar o valor total do orçamento
+    let valorTotal = 0;
 
     // Mensagem formatada para o WhatsApp
-    let mensagem = `Orçamento de ${nomeCliente} para a data ${dataFormatada}:\n\n`;
-        mensagem += 'Item                | Quantidade\n';
-        mensagem += '---------------------------------\n';
+    let mensagem = `Orçamento de ${nomeCliente} para a data ${dataEvento}:\n\n`;
+
     salgadosSelecionados.forEach((salgado, index) => {
         const quantidade = quantidades[index] || 0; // Captura a quantidade correspondente
-        mensagem += `${salgado}: ${quantidade}\n`;
+        const precoUnitario = precosSalgados[salgado] || 0; // Pega o preço do salgado
+        const totalSalgado = precoUnitario * quantidade; // Calcula o total de cada salgado
+        valorTotal += totalSalgado; // Adiciona ao valor total
+
+        mensagem += `${salgado}: ${quantidade} unidade(s) x R$ ${precoUnitario.toFixed(2)} = R$ ${totalSalgado.toFixed(2)}\n`;
     });
+
+    // Adiciona o valor total ao final da mensagem
+    mensagem += `\nValor total do orçamento: R$ ${valorTotal.toFixed(2)}\n`;
 
     // Número de WhatsApp (substitua pelo seu número)
     const numeroWhatsApp = '5579999353965'; // Exemplo: +55 11 99999-9999
