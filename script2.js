@@ -30,28 +30,25 @@ document.getElementById('botao-finalizar').addEventListener('click', function (e
         return;
     }
 
-    // Captura o nome e a data do evento
-    const nomeCliente = document.getElementById('nome-cliente').value.trim();
-    const dataEvento = document.getElementById('data-evento').value;
-
-    // Verifica se os campos de nome e data foram preenchidos
-    if (!nomeCliente || !dataEvento) {
-        alert('Por favor, insira o nome do cliente e a data do evento.');
-        return;
-    }
-
     // Mensagem formatada para o WhatsApp
-    let mensagem = `Orçamento de ${nomeCliente} para o dia ${new Date(dataEvento).toLocaleDateString('pt-BR')}:\n\n`;
+    let mensagem = `Orçamento de ${nome} para o dia ${dataFormatada}:\n\n`;
     salgadosSelecionados.forEach((salgado, index) => {
         const quantidade = quantidades[index] || 0; // Captura a quantidade correspondente
         mensagem += `${salgado}: ${quantidade}\n`;
     });
 
     // Número de WhatsApp (substitua pelo seu número)
-    const numeroWhatsApp = '5579999353965'; // Exemplo: +55 11 99999-9999
+    const numeroWhatsApp = ''; // Exemplo: +55 11 99999-9999
     const baseUrl = 'https://wa.me/';
-
+    
     // Enviar mensagem via WhatsApp
     const url = `${baseUrl}${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
     window.open(url, '_blank'); // Abre o WhatsApp em nova aba
+
+     // Formatar a data para dd/mm/aaaa
+     const [ano, mes, dia] = dataEvento.split('-');
+     const dataFormatada = `${dia}/${mes}/${ano}`;
+     // Captura os valores do nome e data
+    const nome = document.getElementById('nome').value;
+    const dataEvento = document.getElementById('data-evento').value;
 });
