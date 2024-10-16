@@ -66,10 +66,10 @@ document.getElementById('botao-finalizar').addEventListener('click', function (e
     salgadosSelecionados.forEach((salgado, index) => {
         const quantidade = quantidades[index] || 0; // Captura a quantidade correspondente
         const precoUnitario = precosSalgados[salgado] || 0; // Pega o preço do salgado
-        const totalSalgado = precoUnitario * quantidade; // Calcula o total de cada salgado
+        const totalSalgado = precoUnitario * quantidade; // Calcula o total de cada salgado 
         valorTotal += totalSalgado; // Adiciona ao valor total
 
-        mensagem += `${salgado}: ${quantidade} unidade(s) x R$ ${precoUnitario.toFixed(2)} = R$ ${totalSalgado.toFixed(2)}\n`;
+        mensagem += `${salgado}: ${quantidade} unidade(s) = R$ ${totalSalgado.toFixed(2)}\n`;
     });
 
     // Adiciona o valor total ao final da mensagem
