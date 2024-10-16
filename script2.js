@@ -30,8 +30,13 @@ document.getElementById('botao-finalizar').addEventListener('click', function (e
         return;
     }
 
+    // Recupera o nome do cliente e a data do evento do localStorage
+    const nomeCliente = localStorage.getItem('nomeCliente') || 'Cliente';
+    const dataEvento = localStorage.getItem('dataEvento') || 'Data não informada';
+
     // Mensagem formatada para o WhatsApp
-    let mensagem = `Orçamento de ${nome} para o dia ${dataFormatada}:\n\n`;
+    let mensagem = `Orçamento de ${nomeCliente} para a data ${dataEvento}:\n\n`;
+
     salgadosSelecionados.forEach((salgado, index) => {
         const quantidade = quantidades[index] || 0; // Captura a quantidade correspondente
         mensagem += `${salgado}: ${quantidade}\n`;
@@ -44,11 +49,4 @@ document.getElementById('botao-finalizar').addEventListener('click', function (e
     // Enviar mensagem via WhatsApp
     const url = `${baseUrl}${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
     window.open(url, '_blank'); // Abre o WhatsApp em nova aba
-
-     // Formatar a data para dd/mm/aaaa
-     const [ano, mes, dia] = dataEvento.split('-');
-     const dataFormatada = `${dia}/${mes}/${ano}`;
-     // Captura os valores do nome e data
-    const nome = document.getElementById('nome').value;
-    const dataEvento = document.getElementById('data-evento').value;
 });
