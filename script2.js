@@ -46,8 +46,8 @@ document.getElementById('botao-finalizar').addEventListener('click', function (e
 
     // Mensagem formatada para o WhatsApp
     let mensagem = `Orçamento de ${nomeCliente} para a data ${dataFormatada}:\n\n`;
-    mensagem += 'Item                | Quantidade\n';
-    mensagem += '---------------------------------\n';
+        mensagem += 'Item                | Quantidade\n';
+        mensagem += '---------------------------------\n';
     salgadosSelecionados.forEach((salgado, index) => {
         const quantidade = quantidades[index] || 0; // Captura a quantidade correspondente
         mensagem += `${salgado}: ${quantidade}\n`;
