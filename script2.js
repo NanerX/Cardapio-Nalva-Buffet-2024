@@ -1,16 +1,16 @@
 // Lista de salgados com seus preços
 const precosSalgados = {
-    "Camarão Empanado": 1.40,
-    "Camarão Empanado na Tapioca": 1.60,
-    "Croquete de Camarão": 1.40,
-    "Bacalhau": 1.40,
-    "Bolinho de Carne de Sol": 1.40,
-    "Risole de Aratu": 1.40,
+    "Camarão Empanado": 1.50,
+    "Camarão Empanado na Tapioca": 1.70,
+    "Croquete de Camarão": 1.50,
+    "Bacalhau": 1.50,
+    "Bolinho de Carne de Sol": 1.50,
+    "Risole de Aratu": 1.50,
     "Coxinha": 1.20,
     "Bolinha de Queijo": 1.20,
     "Pão de Queijo": 1.20,
     "Pão de Queijo com Recheio": 1.30,
-    "Peito de Peru": 1.40,
+    "Peito de Peru": 1.50,
     "Canudinho": 1.20,
     "Pastelzinho": 1.20,
     "Empada": 1.20,
@@ -18,7 +18,7 @@ const precosSalgados = {
     "Canolle": 1.20,
     "Crepnete": 1.20,
     "Cormeguis": 1.20,
-    "Casquinha de Aratu": 1.60
+    "Casquinha de Aratu": 1.70
 };
 
 // Recupera os salgados selecionados do localStorage
