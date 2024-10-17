@@ -96,7 +96,7 @@ document.getElementById('botao-finalizar').addEventListener('click', function (e
     let valorTotal = 0;
 
     // Mensagem formatada para o WhatsApp
-    let mensagem = `Orçamento de *${nomeCliente}* para a data ${dataEvento}:\n\n`;
+    let mensagem = `Orçamento de ${nomeCliente} para a data ${dataEvento}:\n\n`;
 
     // Calcular total para salgados
     salgadosSelecionados.forEach((salgado, index) => {
@@ -122,7 +122,7 @@ document.getElementById('botao-finalizar').addEventListener('click', function (e
     mensagem += `\nValor total do orçamento: R$ ${valorTotal.toFixed(2)}\n`;
 
     // Número de WhatsApp (substitua pelo seu número)
-    const numeroWhatsApp = '5579998358788'; // Exemplo: +55 11 99999-9999
+    const numeroWhatsApp = '557999169957'; // Exemplo: +55 11 99999-9999
     const baseUrl = 'https://wa.me/';
     
     // Enviar mensagem via WhatsApp
