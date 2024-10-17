@@ -35,14 +35,17 @@ body {
     color: #333;            /* Cor do texto */
 }
 
-/* Estilo para a lista de salgados */
+/* Estilo para a lista de salgados e doces */
 ul {
     padding: 0;
 }
 
 #salgados-lista,
 #salgados-forno-lista,
-#lista-selecionados {
+#lista-selecionados,
+#doces-simples-lista,
+#doces-finos-lista,
+#doces-finos-banhados-lista {
     list-style-type: none;  /* Remove os marcadores da lista */
     width: 80%;             /* Tamanho da lista para responsividade */
     text-align: left;       /* Alinha a lista à esquerda */
@@ -52,7 +55,10 @@ ul {
 
 #salgados-lista li,
 #salgados-forno-lista li,
-#lista-selecionados li {
+#lista-selecionados li,
+#doces-simples-lista li,
+#doces-finos-lista li,
+#doces-finos-banhados-lista li {
     font-size: 1.2em;       /* Tamanho da fonte dos itens da lista */
     margin: 10px 0;         /* Espaçamento entre os itens */
 }
@@ -60,7 +66,10 @@ ul {
 /* Caixa de seleção alinhada à esquerda dos itens */
 #salgados-lista li input,
 #salgados-forno-lista li input,
-#lista-selecionados li input {
+#lista-selecionados li input,
+#doces-simples-lista li input,
+#doces-finos-lista li input,
+#doces-finos-banhados-lista li input {
     margin-right: 10px;      /* Espaçamento entre o checkbox e o texto */
 }
 
@@ -68,12 +77,16 @@ ul {
 @media (max-width: 768px) {
     #salgados-lista,
     #salgados-forno-lista,
-    #lista-selecionados {
+    #lista-selecionados,
+    #doces-simples-lista,
+    #doces-finos-lista,
+    #doces-finos-banhados-lista {
         width: 100%;          /* Ocupa toda a largura no celular */
         padding-left: 20px;   /* Adicionar um espaçamento da borda esquerda */
     }
 }
 
+/* Estilo para os botões */
 #botao-imagem,
 #botao-finalizar {
     margin-bottom: 200px; /* Ajusta a margem inferior */
@@ -127,19 +140,28 @@ input[type="checkbox"] {
     accent-color: #000000; /* Cor personalizada para o checkbox */
 }
 
-/* Estilo para o campo de nome do cliente e a data do evento */
+/* Estilo para os campos de nome e data */
+.campo {
+    display: flex; /* Ativa o flexbox */
+    flex-direction: column; /* Alinha os itens na coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-bottom: 20px; /* Espaçamento entre os campos */
+}
+
+/* Estilo dos rótulos */
 label {
     font-size: 1.2em; /* Ajusta o tamanho do texto do label */
     color: #000000; /* Cor do texto */
-    margin-bottom: 10px; /* Espaçamento abaixo do label */
-    display: block; /* Faz o label ocupar a linha inteira */
+    margin-bottom: 5px; /* Espaçamento abaixo do label */
+    text-align: center; /* Centraliza o texto do label */
 }
 
+/* Estilo para os campos de entrada */
 input[type="text"],
 input[type="date"] {
-    width: 10%; /* Largura do campo para se ajustar ao layout */
+    width: 80%; /* Ajusta a largura do campo */
     padding: 10px; /* Espaçamento interno para o campo de input */
-    margin-bottom: 20px; /* Espaçamento abaixo do campo */
+    margin-bottom: 10px; /* Espaçamento abaixo do campo */
     border: 2px solid #ddd; /* Borda sutil para o campo */
     border-radius: 5px; /* Bordas arredondadas */
     font-size: 1em; /* Tamanho do texto */
@@ -157,6 +179,7 @@ input[type="date"] {
     }
 }
 
+
 /* Estilo ao focar nos campos (quando o usuário clica neles) */
 input[type="text"]:focus,
 input[type="date"]:focus {
@@ -168,4 +191,120 @@ input[type="date"]:focus {
 /* Adicionando espaçamento entre o botão e o formulário */
 form {
     margin-bottom: 100px; /* Espaçamento entre o formulário e o botão */
+}
+
+/* Estilo para a lista de doces */
+#doces-simples-lista,
+#doces-finos-lista {
+    list-style-type: none;  /* Remove os marcadores da lista */
+    width: 80%;             /* Tamanho da lista para responsividade */
+    text-align: left;       /* Alinha a lista à esquerda */
+    margin: 0;
+    padding: 0;
+}
+
+#doces-simples-lista li,
+#doces-finos-lista li {
+    font-size: 1.2em;       /* Tamanho da fonte dos itens da lista */
+    margin: 10px 0;         /* Espaçamento entre os itens */
+}
+
+/* Caixa de seleção alinhada à esquerda dos itens */
+#doces-simples-lista li input,
+#doces-finos-lista li input {
+    margin-right: 10px;      /* Espaçamento entre o checkbox e o texto */
+}
+
+/* Estilo para a lista de Doces Finos (Banhados) */
+#doces-finos-banhados-lista {
+    list-style-type: none;  /* Remove os marcadores da lista */
+    width: 80%;             /* Tamanho da lista para responsividade */
+    text-align: left;       /* Alinha a lista à esquerda */
+    margin: 0;
+    padding: 0;
+}
+
+#doces-finos-banhados-lista li {
+    font-size: 1.2em;       /* Tamanho da fonte dos itens da lista */
+    margin: 10px 0;         /* Espaçamento entre os itens */
+}
+
+/* Caixa de seleção alinhada à esquerda dos itens */
+#doces-finos-banhados-lista li input {
+    margin-right: 10px;      /* Espaçamento entre o checkbox e o texto */
+}
+#salgados-selecionados,
+#doces-selecionados {
+    display: flex; /* Ativa o flexbox */
+    flex-direction: column; /* Alinha os itens na coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-bottom: 20px; /* Espaçamento entre as seções */
+}
+
+#salgados-selecionados h2,
+#doces-selecionados h2 {
+    text-align: center; /* Centraliza o texto dos títulos */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+#salgados-selecionados ul,
+#doces-selecionados ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão */
+    text-align: center; /* Centraliza o texto da lista */
+    width: 100%; /* Garante que a lista ocupe a largura total */
+}
+#salgados-selecionados ul,
+#doces-selecionados ul {
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Alinha os itens na coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    padding: 0; /* Remove o padding padrão */
+}
+
+#salgados-selecionados li,
+#doces-selecionados li {
+    text-align: center; /* Centraliza o texto dos itens da lista */
+    width: 100%; /* Garante que cada item ocupe a largura total */
+}
+#salgados-selecionados h2,
+#doces-selecionados h2 {
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Garante que a centralização funcione corretamente */
+}
+/* Estilo para o campo de nome do cliente e a data do evento */
+div {
+    display: flex; /* Usar flexbox para alinhar os itens */
+    align-items: center; /* Alinhar verticalmente ao centro */
+    margin-bottom: 20px; /* Espaçamento abaixo de cada campo */
+}
+
+label {
+    font-size: 1.2em; /* Ajusta o tamanho do texto do label */
+    color: #000000; /* Cor do texto */
+    margin-right: 10px; /* Espaçamento à direita do label */
+    flex: 1; /* Permite que o label ocupe o espaço necessário */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    width: 80%; /* Ajustar a largura do campo */
+    padding: 10px; /* Espaçamento interno para o campo de input */
+    border: 2px solid #ddd; /* Borda sutil para o campo */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1em; /* Tamanho do texto */
+    font-family: 'Agenor Thin', sans-serif; /* Aplicar a fonte personalizada */
+    color: #000000; /* Cor do texto */
+    background-color: #fff; /* Cor de fundo do input */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar */
+}
+
+/* Estilo ao focar nos campos (quando o usuário clica neles) */
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus {
+    outline: none; /* Remove o contorno padrão */
+    border-color: #000000; /* Cor da borda ao focar */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Realça a sombra ao focar */
 }
